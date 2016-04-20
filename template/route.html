@@ -37,7 +37,15 @@ SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页�
 <div class="desc">   
     <p>由于某些业务需要,例如从pageC pageD存在关联
     ,从pageD回退到pageC的时候,并不希望删除掉pageD页面.那么就可以配置pageD的控制器backRemove为false,这样即可达到目的. </p>
-    <p>这样配置之后,又存在一个问题,pageD岂不是一直留在app中了?即使它已经一直不会被用到了. 解决这个问题,可以在pageD的上一个页面即pageC页面的控制器上设置一个backGC属性为true . 这个属性的作用就是当pageC回退时候,就可以回收掉路由数组中它之后的所有页面.</p>
+    <p>这样配置之后,又存在一个问题,pageD岂不是一直留在app中了?即使它已经一直不会被用到了. 解决这个问题,可以在pageD的上一个页面即pageC页面的控制器上设置一个backGC属性为true . 这个属性的作用就是当pageC回退时候,就可以清空掉路由数组并销毁所有页面</p>
+    <p>如果你用的是chrome浏览器,可以在开发者工具中的Elements选择观察页面dom的变化</p>
+</div>
+</section>
+
+<section>    
+<p id="route_link3" class="btn">销毁全部页面并回到首页</p> 
+<div class="desc">   
+    <p>如果业务流程在某些环节是不可逆的，比如电商网站的付款环节，是回退不到扣款页面的。在这个页面回退，往往不是回到上一个页面，而是直接返回首页。在这样的流程中，就需要在该页面的控制器中设置backGC属性为true。 这个属性的作用就是回退时候,可以清空掉路由数组并销毁所有页面</p>
     <p>如果你用的是chrome浏览器,可以在开发者工具中的Elements选择观察页面dom的变化</p>
 </div>
 </section>

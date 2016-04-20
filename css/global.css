@@ -25,13 +25,13 @@ input[type="text"], input[type="number"], input[type="tel"], input[type="passwor
 .home{padding:10px;}
 .pageA{background:#FF0;height:100%}
 .pageB{background:blue ;height:100%}
-.home section{border-bottom:1px solid #999;margin-bottom:5px;padding:5px;}
+.home section{border-bottom:1px solid #999;margin-bottom:10px;padding:5px;}
 header{height:40px;background:#CCC}
 header p{margin-left:30px;height:40px;line-height:40px}
 .center{text-align:center;margin-top:50px}
 .font18{font-size:18px;}
 .mt30{margin-top:30px;}
-.btn{max-width:150px;padding:2px 5px;height:30px;line-height:30px;border:1px solid #fff;background:#ccc;color:#F00;text-align:center;margin:0 auto;}
+.btn{max-width:160px;padding:2px 5px;height:30px;line-height:30px;border:1px solid #fff;background:#ccc;color:#F00;text-align:center;margin:0 auto;}
 .desc{font-size:12px;line-height:13px;margin-top:20px}
 .desc p{text-indent:20px;margin-top:8px}
 .rules{font-size:12px;}

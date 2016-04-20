@@ -13,6 +13,12 @@ routeController.initEvent = function(){
 		pageCController.show('reload');
 	})
 	
+	$('#route_link3').tap(function(){
+		pageCController.show('reload',function(){
+			$('#pageC_toPageD').hide();	
+		});
+	})
+	
 	$('#route_back').tap(function(){
 		routeController.goBack();
 	})
