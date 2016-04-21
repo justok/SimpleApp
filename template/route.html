@@ -50,6 +50,21 @@ SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页�
 </div>
 </section>
 
+<section>    
+<p id="route_link4" class="btn">环形路由</p> 
+<div class="desc">   
+    <p>在某些业务场景中，存在着两个页面之间相互链接的情况，如pageF和pageG都有一个链接互相指向对方。 那么这两个页面的控制器在初始化的时候都需要定义为环形路由。
+   <code>
+  var pageFController = new SimpleApp.PageController({
+	name: 'pageF',
+	tpl : 'template/pageF.html',
+	circleRoute: true
+})</code>  
+</p>
+ 
+</div>
+</section>
+
 
 </div>
 

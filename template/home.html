@@ -52,7 +52,7 @@ SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页�
     	5 每个页面的控制器的变量重置工作由控制器的setDefConfig方法实现，框架里只是空方法。在每个控制器里可自由重写。
     <li>
     <li>
-    	6 首页控制器homeController是必须要定义的，并且名字只能是homeController
+    	6 首页控制器homeController是必须要定义的，并且名字默认是home 。可以通过初始化方法，<code>SimpleApp.Global.init({'idxName':'xxxx'})</code>修改为xxxx
     <li>
     	7 使用环境。由于在调用控制器的show方法时，会利用xhr请求页面模板，所以请放在http环境进行开发与测试。由于框架本身只针对移动端单页app,请在用pc浏览本页面时候采用chrome手机模拟器环境
     </li>

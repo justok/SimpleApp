@@ -19,6 +19,10 @@ routeController.initEvent = function(){
 		});
 	})
 	
+	$('#route_link4').tap(function(){
+		pageFController.show('reload');
+	})
+	
 	$('#route_back').tap(function(){
 		routeController.goBack();
 	})
