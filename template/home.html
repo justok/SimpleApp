@@ -59,9 +59,7 @@ SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页�
     <li>
     <li>
     	6 首页控制器homeController是必须要定义的，他担负着渲染首页的工作。并且name默认是home ，这个默认值可以修改，可以通过初始化方法，<code>SimpleApp.Global.init({'idxName':'yourName'})</code>修改为yourName
-    <li>
-    	7 使用环境。由于在调用控制器的show方法时，会利用xhr请求页面模板，所以请放在http环境进行开发与测试。由于框架本身只针对移动端单页app,请在用pc浏览本页面时候采用chrome手机模拟器环境.
-    </li>
+    
     </ul>
 </section>
 
@@ -69,7 +67,9 @@ SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页�
 <h3>注意事项:</h3>
 	<ul class="rules">
     	<li>1 由于单页app的特殊性，页面元素的id命名冲突的可能性相较普通web页面有加大的可能。所以建议一种id命名方式，以每个一级页面[即class=page]的id为前缀。如homeController对应的页面[id="home"], 这个页面里面的一个后退按钮的id可以命名为"home_back"。而pageAController控制器对应的页面[id="pageA"]，这个页面的一个后退按钮id可以命名为"pageA_back".  以此类推。
-    
+    	<li>
+    	  2 使用环境:由于在调用控制器的show方法时，会利用xhr请求页面模板，所以请放在http环境进行开发与测试。由于框架本身只针对移动端单页app,请在用pc浏览本页面时候采用chrome手机模拟器环境.
+    </li>
     </ul>
 </section>
 
