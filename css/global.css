@@ -31,7 +31,7 @@ header p{margin-left:30px;height:40px;line-height:40px}
 .center{text-align:center;margin-top:50px}
 .font18{font-size:18px;}
 .mt30{margin-top:30px;}
-.btn{max-width:160px;padding:2px 5px;height:30px;line-height:30px;border:1px solid #fff;background:#ccc;color:#F00;text-align:center;margin:0 auto;}
+.btn{max-width:160px;padding:2px 5px;height:30px;line-height:30px;border:1px solid #ccc;background:#333;color:#fff;text-align:center;margin:5px auto;}
 .desc{font-size:13px;line-height:13px;margin-top:20px}
 .desc p{text-indent:20px;margin-top:8px;line-height:18px}
 .rules{font-size:13px;}
