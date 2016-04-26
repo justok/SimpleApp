@@ -51,7 +51,7 @@ SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页�
 </section>
 
 <section>    
-<p id="route_link4" class="btn">环形路由</p> 
+<p id="route_link4" class="btn">环形路由[1]</p> 
 <div class="desc">   
     <p>在某些业务场景中，存在着两个页面之间相互链接的情况，如pageF和pageG都有一个链接互相指向对方。 那么这两个页面的控制器在初始化的时候都需要定义为环形路由。
    <code>
@@ -60,8 +60,29 @@ SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页�
 	tpl : 'template/pageF.html',
 	circleRoute: true
 })</code>  
+</p> 
+</div>
+</section>
+
+<section>    
+<p id="route_link5" class="btn" data-pageId="1">环形路由[2]</p> 
+<div class="desc">   
+    <p> 在某些社交类应用中,经常出现用户个人主页相互链接的情况,而在程序中,个人主页却是同一个页面和控制器. 那么这个页面的控制器在初始化的时候也需要定义为环形路由
+   <code>
+  var pageHController = new SimpleApp.PageController({
+	name: 'pageH',
+	tpl : 'template/pageH.html',
+	circleRoute: true
+})</code>  
+</p> 
+<p>
+	 且需要在页面控制器中定义 setData方法，里面定义 pageId作为区分相同控制器下不同页面的区别键值。setData与pageId是不可改变的框架默认值。 
+  <code>
+  	pageHController.setData = function(obj){
+		this.pageId = obj.pageId;
+  	}
+  </code>
 </p>
- 
 </div>
 </section>
 

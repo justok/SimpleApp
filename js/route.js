@@ -23,6 +23,15 @@ routeController.initEvent = function(){
 		pageFController.show('reload');
 	})
 	
+	$('#route_link5').tap(function(){
+		var obj = {
+			'pageId' : $(this).attr('data-pageId')
+		}
+		pageHController.show('reload',function(){
+			pageHController.setData(obj); 
+		});
+	})
+	
 	$('#route_back').tap(function(){
 		routeController.goBack();
 	})
