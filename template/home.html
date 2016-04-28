@@ -16,10 +16,9 @@
 
 <section>
 SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页应用的前端路由，页面管理，页面切换等问题。目前依赖于zepto.js。 
-<p class="desc">
-	
-</p>
 </section>
+
+
 
 <section>
 <h3>Demo:</h3>
@@ -61,6 +60,17 @@ SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页�
     	6 首页控制器homeController是必须要定义的，他担负着渲染首页的工作。并且name默认是home ，这个默认值可以修改，可以通过初始化方法，<code>SimpleApp.Global.init({'idxName':'yourName'})</code>修改为yourName
     
     </ul>
+</section>
+
+<section>
+<h3>为什么要用SimpleApp?</h3>
+<div class="desc">
+<p>
+在过去公司做的的几个单页webapp过程中，经历过很多框架选型的苦恼。之前的一个团队用sench touch 这样的重型框架，由于sencha touch的js生成dom逻辑过于的复杂，导致页面执行效率很差，在一些中低端安卓机器上的表现很差。所以在以后的项目中，一直想寻找一种轻型的可代替方案。所以一概越过了angular,sencha touch ,jquery mobile这样重型的不尽如人意的框架。曾经想用过backbone,无奈觉得它更像是mvc模式的一种架构组织形式，远远解决不了我们业务场景中的关于路由和页面切换等等实际业务的痛点。
+</p>
+<p>无奈只好自己动手写了这样一个轻型小框架，解决了路由问题，页面管理销毁问题，页面切换问题等单页app中的关键点。 至于表现层的一些东西，SimpleApp并不介入。由业务类型去让开发者决定用什么样的插件或小框架，甚至自己去写，这样更灵活机动。解决了在大框架背景下的学习成本，调试成本，及后期维护成本。  一句话总结：<span class="red">所有仅仅为了学习新技术或炫技而启用不适合业务场景的重型框架都是给自己挖坑！</span>
+</p>
+</div>
 </section>
 
 <section>
