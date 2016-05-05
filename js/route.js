@@ -32,6 +32,11 @@ routeController.initEvent = function(){
 		});
 	})
 	
+	$('#route_link6').tap(function(){
+		location.href="?pageName=pageH&pageId=1";
+	})
+	
+	
 	$('#route_back').tap(function(){
 		routeController.goBack();
 	})
