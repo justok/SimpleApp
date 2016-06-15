@@ -1,0 +1,42 @@
+@charset "utf-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, input, label,textarea{margin:0;padding:0;}
+html,body{height:100%;font:14px/1.5 "Microsoft YaHei",Microsoft YaHei,"Helvetica Neue",HelveticaNeue,"Helvetica-Neue",Helvetica,"BBAlpha Sans",sans-serif;color:#333;min-width:320px;background:#fff/*-webkit-text-size-adjust:none;*/-webkit-tap-highlight-color:transparent;-moz-tap-highlight-color:transparent;-ms-tap-highlight-color:transparent;
+-o-tap-highlight-color:transparent;outline:0;}
+html{-webkit-text-size-adjust:none;}
+section,article,aside,header,footer,nav,dialog,figure{display:block;}
+h1, h2, h3, h4, h5, h6{font-weight: normal; font-size: 1em;}
+a{text-decoration: none;color:#333;outline: none;}
+input{outline: none;border: 0; font-size: 14px;}
+ul,li{list-style:none;}
+img{border:0;vertical-align:middle;outline:none;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,th,var,i{font-weight:normal;font-style:normal;}
+input[type="radio"], input[type="checkbox"], input[type="submit"], input[type="rest"], input[type="button"], button, select {cursor:pointer;}
+input[type="text"], input[type="number"], input[type="tel"], input[type="password"], input[type="submit"], input[type="rest"], input[type="button"], button, textarea {-webkit-border-radius:0;-webkit-appearance:none;-moz-appearance:none; color: #333;}
+::-webkit-input-placeholder{color:#bbb;}
+.err::-webkit-input-placeholder{color:#ff0000;}
+.clearfix:before,.clearfix:after{content:"";display:table;height:0;font-size:0;line-height:0;visibility:hidden;}
+.clearfix:after{clear:both;}
+.clearfix{*zoom:1;}
+.fl{float:left;}
+.fr{float: right;}
+
+.page{height:100%}
+.home{padding:10px;}
+.pageA{background:#FF0;height:100%}
+.pageB{background:blue ;height:100%}
+.home section{border-bottom:1px solid #999;margin-bottom:10px;padding:5px;}
+header{height:40px;background:#CCC}
+header p{margin-left:30px;height:40px;line-height:40px}
+.center{text-align:center;margin-top:50px}
+.font18{font-size:18px;}
+.mt30{margin-top:30px;}
+.btn{max-width:160px;padding:2px 5px;height:30px;line-height:30px!important;border:1px solid #ccc;background:#333;color:#fff;text-align:center;margin:5px auto;}
+.desc{font-size:13px;line-height:13px;margin-top:20px}
+.desc p{text-indent:20px;margin-top:8px;line-height:18px}
+.rules{font-size:13px;}
+.rules li{margin:9px 0}
+code{color:#0C6;font-weight:bold}
+h3{color:#000;font-weight:bold}
+.red{color:red}
+

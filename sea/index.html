@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<title></title>
+<link rel="stylesheet" href="css/global.css"/>
+<script src="lib/seajs/sea.js"></script>
+<script type="text/javascript">
+var Global = {}; //用于存储页面controller，代替之前的全局window,解决SimpleApp中路由需要全局变量的需求  //但是这种解决方式不够优雅，和SimpleApp.js形成了强关联。
+seajs.config({
+	base: './',
+	alias: {
+		'zepto': 'lib/zepto/zepto.js',
+		'SimpleApp': 'lib/simpleapp/SimpleApp.js'	
+	}
+})
+//seajs.use('zepto');
+seajs.use(['js/home.js'],function(homeController){
+	homeController.show();
+});
+</script>
+
+
+<!--<script type="text/javascript" src="lib/zepto/zepto.js"></script>
+<script type="text/javascript" src="lib/zepto/touch.js"></script>
+<script type="text/javascript" src="lib/zepto/fx.js"></script>
+<script type="text/javascript" src="lib/zepto/fx_methods.js"></script>
+
+
+<script type="text/javascript" src="lib/simpleapp/simpleapp.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/route.js"></script>
+<script type="text/javascript" src="js/pageA.js"></script>
+<script type="text/javascript" src="js/pageB.js"></script>
+<script type="text/javascript" src="js/pageC.js"></script>
+<script type="text/javascript" src="js/pageD.js"></script>
+<script type="text/javascript" src="js/pageE.js"></script>
+<script type="text/javascript" src="js/pageF.js"></script>
+<script type="text/javascript" src="js/pageG.js"></script>
+<script type="text/javascript" src="js/pageH.js"></script>-->
+</head>
+<body>
+
+
+<script>
+//homeController.show();
+//SimpleApp.Global.checkRoute();
+</script>
+
+</body> 
+
+</html>
