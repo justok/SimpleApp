@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<title></title>
+<link rel="stylesheet" href="css/global.css"/>
+</head>
+<body>
+<div class="home">
+
+<section>
+SimpleApp是一款适用于单页应用的轻型框架。 致力于解决单页应用的前端路由，页面管理，页面切换等问题。目前依赖于zepto.js。 
+</section>
+
+
+
+<section>
+<h3>Demo:</h3>
+<p id="home_link1" class="btn">关于路由的展示</p>
+<p id="home_link2" class="btn">页面切换的展示</p>
+</section>
+
+<h3>如何使用:</h3>
+<section>
+	<ul class="rules">
+	<li>1 每个页面定义一个控制器,控制器的名字由定义时候的name属性 + "Controller"组成如：<br>
+    <code>
+    	var pageAController = new SimpleApp.PageController({
+			name: 'pageA',                //页面名字
+			tpl : 'template/pageA.html'   //页面模板
+		})
+    </code>
+    <br> 注意：这个name在整个app中必须是唯一的，而且会自动对应到该页面dom的id。如name="pageA", 则调用show方法时候，会自动生成一个id为pageA的div        </li>
+    <li>
+    	2 每个页面的显示用控制器的show方法来展示
+        如 从pageA -> pageB,  则调用pageBController.show(); 如果想要在展示pageB后，回调pageBController的方法A则可以这样写
+        <code>
+        	pageBController.show('',function(){
+            	pageBController.A()
+            })
+        </code>
+    </li>
+    <li>
+    	3 每个页面的回退调用控制器的goBack方法 
+        如从 pageB -> pageA, 则调用 <code>pageBController.goBack();</code>
+    </li>
+    <li>
+    	4 每个页面的初始化工作由控制器的init方法里实现，如页面数据接口的请求与后续模板填充等等.
+    </li>
+    <li>
+    	5 每个页面的控制器的变量重置工作由控制器的setDefConfig方法实现，框架里只是空方法。在每个控制器里可自由重写。
+    <li>
+    <li>
+    	6 首页控制器homeController是必须要定义的，他担负着渲染首页的工作。并且name默认是home ，这个默认值可以修改，可以通过初始化方法，<code>SimpleApp.Global.init({'idxName':'yourName'})</code>修改为yourName
+    
+    </ul>
+</section>
+
+<section>
+<h3>为什么要用SimpleApp?</h3>
+<div class="desc">
+<p>
+在过去公司做的的几个单页webapp过程中，经历过很多框架选型的苦恼。之前的一个团队用sench touch 这样的重型框架，由于sencha touch的js生成dom逻辑过于的复杂，导致页面执行效率很差，在一些中低端安卓机器上的表现很差。所以在以后的项目中，一直想寻找一种轻型的可代替方案。所以一概越过了angular,sencha touch ,jquery mobile这样重型的不尽如人意的框架。曾经想用过backbone,无奈觉得它更像是mvc模式的一种架构组织形式，远远解决不了我们业务场景中的关于路由和页面切换等等实际业务的痛点。
+</p>
+<p>无奈只好自己动手写了这样一个轻型小框架，解决了路由问题，页面管理销毁问题，页面切换问题等单页app中的关键点。 至于表现层的一些东西，SimpleApp并不介入。由业务类型去让开发者决定用什么样的插件或小框架，甚至自己去写，这样更灵活机动。解决了在大框架背景下的学习成本，调试成本，及后期维护成本。  一句话总结：<span class="red">所有仅仅为了学习新技术或炫技而启用不适合业务场景的重型框架都是给自己挖坑！</span>
+</p>
+</div>
+</section>
+
+<section>
+<h3>注意事项:</h3>
+	<ul class="rules">
+    	<li>1 由于单页app的特殊性，页面元素的id命名冲突的可能性相较普通web页面有加大的可能。所以建议一种id命名方式，以每个一级页面[即class=page]的id为前缀。如homeController对应的页面[id="home"], 这个页面里面的一个后退按钮的id可以命名为"home_back"。而pageAController控制器对应的页面[id="pageA"]，这个页面的一个后退按钮id可以命名为"pageA_back".  以此类推。
+    	<li>
+    	  2 使用环境:由于在调用控制器的show方法时，会利用xhr请求页面模板，所以请放在http环境进行开发与测试。由于框架本身只针对移动端单页app,请在用pc浏览本页面时候采用chrome手机模拟器环境.
+    </li>
+    </ul>
+</section>
+
+
+
+
+	
+
+
+
+</div>
+
+
+</body> 
+
+</html>
